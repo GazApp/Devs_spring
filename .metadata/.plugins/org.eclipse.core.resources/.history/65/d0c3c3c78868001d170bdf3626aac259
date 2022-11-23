@@ -1,0 +1,21 @@
+package com.gaz.di;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.gaz.di.atributo.Coche;
+import com.gaz.di.atributo.Motor;
+
+@SpringBootApplication
+public class DependincyInjectionApplication {
+
+	public static void main(String[] args) {
+		//SpringApplication.run(DependincyInjectionApplication.class, args);
+		
+		Motor motor  = new Motor("Z11", 1996);
+		
+		Coche coche = new Coche("VW", 1986, motor);
+		
+	}
+
+}
